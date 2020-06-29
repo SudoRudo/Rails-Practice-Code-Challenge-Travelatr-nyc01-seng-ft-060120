@@ -1,0 +1,9 @@
+<h1><%= @blogger.name %></h1>
+<h3><%= @blogger.age %></h3>
+<%= @blogger.bio %>
+
+<% @blogger.posts.each do |post|%>
+    <p> <%= link_to post.title, post_path(post) %></p>
+<%end%>
+
+<p>Popularity: <%= @blogger.count_likes %></p>
